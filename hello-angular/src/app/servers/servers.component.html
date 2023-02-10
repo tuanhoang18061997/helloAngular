@@ -1,0 +1,27 @@
+<!-- Dùng event.target.value -->
+<!-- <input 
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
+
+<!-- Dùng Two way binding -->
+<input 
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>TwoWay Binding: {{serverName}}</p>
+<button 
+  class="btn btn-primary"
+  [disabled]="!allowCreateServer"
+  (click)="onCreateServer()">Add server</button>
+  <!-- String interpolation -->
+  <!-- <p>{{allowCreateServer}} - <i>String interpolation</i></p>  -->
+  <!-- Propertiy Binding -->
+  <!-- <span [innerText]="allowCreateServer"></span> - <i>Property Binding</i> -->
+  <p *ngIf="serverCreated; else noServerNewCreated" [innerText]="serverCreationStatus"></p>
+  <ng-template #noServerNewCreated><p>No server was created</p></ng-template>
+  <app-server *ngFor="let server of servers"></app-server>
+  <!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let server of servers">{{server}}</li>
+  </ul> -->
+  

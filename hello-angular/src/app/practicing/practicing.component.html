@@ -1,0 +1,17 @@
+<h1>Practicing works</h1>
+<div><span class="badge badge-secondary" style="margin:10px 0;">Practice 1</span></div>
+<app-warning-alert></app-warning-alert>
+<app-success-alert></app-success-alert>
+<div><span class="badge badge-secondary" style="margin:10px 0;">Practice 2</span></div>
+<input type="text" class="form-control" placeholder="Input UserName" [(ngModel)]="userName">
+<p>Name: {{userName}}</p>
+<button class="btn btn-info" [disabled]="userName.length == 0" (click)="onResetInput()">Reset Username</button>
+<div><span class="badge badge-secondary" style="margin:10px 0;">Practice 3</span></div>
+<button class="btn btn-success" (click)="onToggleShowPassword()">Display Password</button>
+<p *ngIf="isShowPassWord">Secret Password = tuna</p>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let log of logs"
+    [ngStyle]="{backgroundColor: getBackgroundColorForLog(log)}"
+    [ngClass]="{logItemEven: log >= 5 && log % 2 === 0, logItemOdd: log >= 5 && log % 2 !== 0}">{{log}}</li>
+</ul>
+<!-- [ngStyle]="{backgroundColor: (log >= 5 && log % 2 === 0) ? 'blue' : (log >= 5 && log % 2 !== 0) ? '#1d1d4a' : ''}" -->

@@ -1,0 +1,5 @@
+<p 
+  class="form-control"
+  [ngStyle]="{color:getColor()}"
+  [ngClass]="{online: serverStatus === 'online', offline: serverStatus === 'offline'}"
+  >{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
