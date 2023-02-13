@@ -1,0 +1,13 @@
+<p>server-element works!</p>
+<div class="card">
+  <!-- #heading sẽ được khai báo với @ViewChild do nó tồn tại trong view của component này -->
+  <div class="card-header" #heading>
+    {{element.type}}
+    <!-- Test change First Element -->
+    {{nameChange}}
+  </div>
+  <div class="card-body">
+   <ng-content></ng-content>
+
+  </div>
+</div>

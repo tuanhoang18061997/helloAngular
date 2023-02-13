@@ -8,6 +8,9 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { PracticingComponent } from './practicing/practicing.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { ServerCockpitComponent } from './server-cockpit/server-cockpit.component';
+import { ServerElementComponent } from './server-cockpit/server-element/server-element.component';
+import { CockpitComponent } from './server-cockpit/cockpit/cockpit.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { ServersComponent } from './servers/servers.component';
     SuccessAlertComponent,
     PracticingComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    ServerCockpitComponent,
+    ServerElementComponent,
+    CockpitComponent
   ],
   imports: [
     BrowserModule,

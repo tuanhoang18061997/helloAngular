@@ -1,0 +1,15 @@
+p{
+  color: blue;
+}
+label{
+  color: darkgreen
+}
+
+.contentRedServer{
+  color: red;
+  font-weight: 500;
+}
+.contentBlueServer{
+  color: blueviolet;
+  font-style: italic;
+}

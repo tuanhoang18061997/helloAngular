@@ -1,0 +1,30 @@
+<p>cockpit works!</p>
+<div class="row">
+  <div class="col-sm-12">
+    <p>Add New redServer or bluePrints!</p>
+    <label for="serverName">Server Name</label>
+    <!-- <input type="text" class="form-control" id="serverName" [(ngModel)]="newServerName"> -->
+    <input
+      type="text"
+      class="form-control"
+      id="serverName"
+      #serverNameInput
+    >
+
+    <label for="serverContent">Server Content</label>
+    <!-- <input type="text" class="form-control" id="serverContent" [(ngModel)]="newServerContent"> -->
+    <input
+      type="text"
+      class="form-control"
+      id="serverContent"
+      #serverContentInput
+    >
+    <br>
+    <button
+    class="btn btn-danger mr-10"
+    (click)="onAddRedServer(serverNameInput)">Add Red Server</button>
+    <button
+    class="btn btn-primary mr-10"
+    (click)="onAddBlueServer(serverNameInput)">Add Blue Server</button>
+  </div>
+</div>

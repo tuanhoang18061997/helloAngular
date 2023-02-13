@@ -1,0 +1,21 @@
+<p>server-cockpit works!</p>
+<app-cockpit (redServerCreatedData)="onGetRedServerAdded($event)"
+  (blueServerCreatedData)="onGetBlueServerAdded($event)"></app-cockpit>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-warning" (click)="onChangeFirstElement()">Change First Element</button>
+    <app-server-element *ngFor="let serverElement of serverElements" [propElementFromS-E]="serverElement"
+      [nameChange]="serverElement.name">
+      <!-- Dùng <ng-content></ng-content> để trong component server-element để show info ở giữa tag mở và đóng của app-server-element -->
+      <h5 class="card-title">{{serverElement.name}}</h5>
+      <p
+        class="card-text"
+        [ngClass]="{contentRedServer: serverElement.type === 'redServer', contentBlueServer: serverElement.type === 'blueServer'}"
+        #contentParagraph>
+        {{serverElement.content}}
+      </p>
+      <!-- #contentParagraph sẽ được khai báo với @ContentChild do nó được chiếu vào trong view của component app-server-element -->
+    </app-server-element>
+  </div>
+</div>
