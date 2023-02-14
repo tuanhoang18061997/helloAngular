@@ -11,6 +11,9 @@ import { ServersComponent } from './servers/servers.component';
 import { ServerCockpitComponent } from './server-cockpit/server-cockpit.component';
 import { ServerElementComponent } from './server-cockpit/server-element/server-element.component';
 import { CockpitComponent } from './server-cockpit/cockpit/cockpit.component';
+import { GameControlComponent } from './assignment_4/game-control/game-control.component';
+import { OddComponent } from './assignment_4/odd/odd.component';
+import { EvenComponent } from './assignment_4/even/even.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { CockpitComponent } from './server-cockpit/cockpit/cockpit.component';
     ServersComponent,
     ServerCockpitComponent,
     ServerElementComponent,
-    CockpitComponent
+    CockpitComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,

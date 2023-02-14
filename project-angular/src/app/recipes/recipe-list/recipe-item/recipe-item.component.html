@@ -1,1 +1,14 @@
 <p>recipe-item works!</p>
+<div
+  class="card"
+  style="width: 18rem; margin: 1rem 0; cursor: pointer;"
+  (click)="onSelected()">
+  <img
+  class="card-img-top"
+  [src]="recipeItem.imagePath"
+  [alt]="recipeItem.name">
+  <div class="card-body">
+    <h5 class="card-title">{{recipeItem.name}}</h5>
+    <p class="card-text">{{recipeItem.description}}</p>
+  </div>
+</div>

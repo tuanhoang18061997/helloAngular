@@ -15,3 +15,17 @@
     [ngClass]="{logItemEven: log >= 5 && log % 2 === 0, logItemOdd: log >= 5 && log % 2 !== 0}">{{log}}</li>
 </ul>
 <!-- [ngStyle]="{backgroundColor: (log >= 5 && log % 2 === 0) ? 'blue' : (log >= 5 && log % 2 !== 0) ? '#1d1d4a' : ''}" -->
+<div><span class="badge badge-secondary" style="margin:10px 0;">Practice 4</span></div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <app-odd *ngFor="let odd of oddNumberArray" [numberOdd]="odd"></app-odd>
+  </div>
+  <div class="col-xs-6">
+    <app-even *ngFor="let even of evenNumberArray" [numberEven]="even"></app-even>
+  </div>
+</div>

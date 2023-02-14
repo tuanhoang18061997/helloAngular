@@ -5,16 +5,11 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="card" style="width: 18rem; margin: 1rem 0;" *ngFor="let recipe of recipes">
-      <img 
-      class="card-img-top" 
-      [src]="recipe.imagePath"
-      [alt]="recipe.name">
-      <div class="card-body">
-        <h5 class="card-title">{{recipe.name}}</h5>
-        <p class="card-text">{{recipe.description}}</p>
-      </div>
-    </div>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeEle of recipes"
+      [recipeItem]="recipeEle"
+      (recipeSelected)="onRecipeSelected(recipeEle)"
+      (click)="onCheckElement(recipeEle)"
+      ></app-recipe-item>
   </div>
 </div>

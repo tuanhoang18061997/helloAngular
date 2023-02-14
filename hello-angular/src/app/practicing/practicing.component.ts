@@ -37,4 +37,16 @@ export class PracticingComponent implements OnInit {
   onResetInput() {
     this.userName = '';
   }
+
+  // Assignment 4
+
+  oddNumberArray: number[] = []
+  evenNumberArray: number[] = []
+  onIntervalFired(firedNumber: number) {
+    if (firedNumber % 2 === 0) {
+      this.evenNumberArray.push(firedNumber)
+    } else {
+      this.oddNumberArray.push(firedNumber)
+    }
+  }
 }
