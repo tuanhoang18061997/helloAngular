@@ -15,7 +15,27 @@
             {{odd}}
           </li>
         </div>
-        <div *ngIf="!onlyOdd">
+        <!-- <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{'odd': even % 2 !== 0}"
+            [ngStyle]="{'backgroundColor': even % 2 !== 0 ? 'yellow': 'transparent'}"
+            *ngFor="let even of evenNumbers">
+            {{even}}
+          </li>
+        </div>
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li
+              class="list-group-item"
+              [ngClass]="{'odd': even % 2 !== 0}"
+              [ngStyle]="{'backgroundColor': even % 2 !== 0 ? 'yellow': 'transparent'}"
+              *ngFor="let even of evenNumbers">
+              {{even}}
+            </li>
+          </div>
+        </ng-template> -->
+        <div *appUnless="onlyOdd">
           <li
             class="list-group-item"
             [ngClass]="{'odd': even % 2 !== 0}"
@@ -26,9 +46,26 @@
         </div>
       </ul>
       <p appBasicHighlight>Style me with basic directive!</p>
+      <p appBetterHighlight
+        defaultColor='darkRed'
+        [defaultHighlightColor]="'red'"
+        >Style me with basic directive!
+      </p>
+      <h1>Hello, you have pressed enter {{counter}} number of times!</h1>
+      <button counting>Increment</button>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
+    </div>
+    <div><span class="badge badge-secondary" style="margin:10px 0;">Example ngSwitchCase</span></div>
+    <div [ngSwitch]="value">
+      <h3>{{value}}</h3>
+      <p *ngSwitchCase="1">Value is 1</p>
+      <p *ngSwitchCase="2">Value is 2</p>
+      <p *ngSwitchCase="3">Value is 3</p>
+      <p *ngSwitchCase="4">Value is 4</p>
+      <p *ngSwitchCase="5">Value is 5</p>
+      <p *ngSwitchDefault>Value is DEFAULT</p>
     </div>
   </div>
 </div>
