@@ -8,8 +8,6 @@
     <app-recipe-item
       *ngFor="let recipeEle of recipes"
       [recipeItem]="recipeEle"
-      (recipeSelected)="onRecipeSelected(recipeEle)"
-      (click)="onCheckElement(recipeEle)"
       ></app-recipe-item>
   </div>
 </div>

@@ -49,4 +49,19 @@ export class PracticingComponent implements OnInit {
       this.oddNumberArray.push(firedNumber)
     }
   }
+
+  // Assignment 5
+
+
+  // onUserSetToActive(id: number) {
+  //   console.log("id to Active: ", id);
+  //   this.activeUsers.push(this.inactiveUsers[id]);
+  //   this.inactiveUsers.splice(id, 1);
+  // }
+
+  // onUserSetToInActive(id: number){
+  //   console.log("id to inActive: ", id );
+  //   this.inactiveUsers.push(this.activeUsers[id]);
+  //   this.activeUsers.splice(id, 1);
+  // }
 }

@@ -14,6 +14,11 @@ import { CockpitComponent } from './server-cockpit/cockpit/cockpit.component';
 import { GameControlComponent } from './assignment_4/game-control/game-control.component';
 import { OddComponent } from './assignment_4/odd/odd.component';
 import { EvenComponent } from './assignment_4/even/even.component';
+import { ActiveUsersComponent } from './assignment_5/active-users/active-users.component';
+import { InactiveUsersComponent } from './assignment_5/inactive-users/inactive-users.component';
+import { UsersService } from './assignment_5/users.service';
+import { CounterService } from './assignment_5/counter.service';
+import { LoggingService } from './shared/services/logging.service';
 
 
 @NgModule({
@@ -29,7 +34,9 @@ import { EvenComponent } from './assignment_4/even/even.component';
     CockpitComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
