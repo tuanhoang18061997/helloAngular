@@ -26,8 +26,9 @@ export class ServerComponent implements OnInit {
   }
 
   onEdit(){
+    console.log(this.route.snapshot);
     // this.router.navigate(['/servers', this.server.id,  'edit'])
-    this.router.navigate(['edit'], {relativeTo: this.route})
+    this.router.navigate(['edit'], {relativeTo: this.route, queryParamsHandling: 'merge'})
   }
 
 }
