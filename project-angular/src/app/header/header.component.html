@@ -4,30 +4,37 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes <span class="sr-only">(current)</span></a>
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link"
+          [routerLink]="['/recipes']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+         (click)="onSelect('recipe')">Recipes <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/shopping-list"
+          routerLinkActive="active"
+         (click)="onSelect('shopping-list')">Shopping List</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a style="cursor: pointer;" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown link
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Save Data</a>
-          <a class="dropdown-item" href="#">Fetch Data</a>
+          <a class="dropdown-item" style="cursor: pointer;">Save Data</a>
+          <a class="dropdown-item" style="cursor: pointer;">Fetch Data</a>
         </div>
       </li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="dropdown" appDropdown>
-        <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+        <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Save Data</a></li>
-          <li><a href="#">Fetch Data</a></li>
+          <li><a style="cursor: pointer;">Save Data</a></li>
+          <li><a style="cursor: pointer;">Fetch Data</a></li>
         </ul>
       </li>
     </ul>
